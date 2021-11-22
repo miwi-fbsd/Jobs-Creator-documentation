@@ -7,11 +7,6 @@ AddEventHandler("esx_job_creator:actions:createBilling", function()
 end)
 ```
 
-### Parameters
-
-| Name              | Data Type | Description                 |
-| -                 | -         | -                           |
-
 ## Example
 ``` lua
 AddEventHandler("esx_job_creator:esx:ready", function() 
