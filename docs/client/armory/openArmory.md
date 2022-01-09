@@ -15,6 +15,7 @@ end)
 
 ## Example
 ``` lua
+-- To place in esx_job_creator/integrations/cl_integrations.lua
 
 AddEventHandler("esx_job_creator:esx:ready", function() 
     -- Disables the default script armory

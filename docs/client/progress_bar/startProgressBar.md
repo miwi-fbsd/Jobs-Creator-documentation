@@ -16,6 +16,8 @@ end)
 
 ## Example
 ``` lua
+-- To place in esx_job_creator/integrations/cl_integrations.lua
+
 AddEventHandler("esx_job_creator:esx:ready", function() 
     -- Disables the default script progress bar (otherwise there would be 2 progress bars)
     exports["esx_job_creator"]:disableScriptEvent("esx_job_creator:startProgressBar")
