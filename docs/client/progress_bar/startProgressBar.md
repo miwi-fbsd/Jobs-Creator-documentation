@@ -2,7 +2,7 @@ Triggered when using progress bar
 
 ## Event
 ``` lua
-AddEventHandler("esx_job_creator:startProgressBar", function(time, text)
+RegisterNetEvent("esx_job_creator:startProgressBar", function(time, text)
 
 end)
 ```
@@ -16,15 +16,13 @@ end)
 
 ## Example
 ``` lua
--- To place in esx_job_creator/integrations/cl_integrations.lua
-
-AddEventHandler("esx_job_creator:esx:ready", function() 
+RegisterNetEvent("esx_job_creator:esx:ready", function() 
     -- Disables the default script progress bar (otherwise there would be 2 progress bars)
     exports["esx_job_creator"]:disableScriptEvent("esx_job_creator:startProgressBar")
 end)
 
 -- Example to replace the script progress bar with an external one
-AddEventHandler("esx_job_creator:startProgressBar", function(time, text)
+RegisterNetEvent("esx_job_creator:startProgressBar", function(time, text)
     -- The event to activate your external progress bar
     TriggerEvent("external_progressbar:start", time, text)
 end)
