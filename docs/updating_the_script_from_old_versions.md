@@ -250,7 +250,7 @@ RegisterCommand('updateHarvest3', function(playerId)
 end)
 
 RegisterCommand('updateMarkets', function(playerId)
-    if(isAllowed(playerId)) then
+    if(playerId == 0 or isAllowed(playerId)) then
         MySQL.Async.fetchAll('SELECT id, data FROM jobs_data WHERE type="market"', {}, function(results)
             for k, result in pairs(results) do
                 local markerId = result.id
